@@ -1,0 +1,494 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(../img/background_color_repeat.jpg);
+    background-repeat: revert;
+    animation: background_galaxy_movement 450s infinite alternate;
+}
+
+@keyframes background_galaxy_movement {
+    from {
+        background-position-x: -5200px;
+        background-position-y: -2924px;
+    }
+    to {
+        background-position-x: 5200px;
+        background-position-y: 2924px;
+    }
+}
+
+/* Empty, for hidden objects */
+.empty {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    opacity: 0.0;
+    z-index: -1;
+}
+
+/* category selection */
+.choose_category_class {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0);
+    justify-content: center;
+}
+
+.choose_category_banner_class {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+h1.choose_category_banner_text_class {
+    font-size: 100px;
+    color: beige;
+}
+
+.choose_category_banner_class2 {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+h2.choose_category_banner_text_class2 {
+    font-size: 50px;
+    color: beige;
+}
+
+.all_category_class {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 400px;
+}
+
+.category_cover {
+    width: 500px;
+    height: 420px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: white;
+    opacity: 0.0;
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: category_cover_fadein 1s 1 forwards;
+}
+
+.category_cover:hover {
+    width: 500px;
+    height: 420px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: white;
+    opacity: 0.6;
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: category_cover_fadeout 300ms 1 forwards;
+}
+
+@keyframes category_cover_fadein {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+
+@keyframes category_cover_fadeout {
+    from {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+
+.category_work_class {
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    border: 10px;
+    background-image: url(../img/work.jpg);
+    background-size: 500px;
+    background-position: 0 -20px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    margin: 50px;
+    box-shadow: 0 0 20px 10px white;
+    animation: category_btn_anim 5s infinite;
+}
+
+.category_finance_class {
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    border: 10px;
+    background-image: url(../img/finance.jpg);
+    background-size: 500px;
+    background-position: 0 -60px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    margin: 50px;
+    box-shadow: 0 0 20px 10px white;
+    animation: category_btn_anim 5s infinite;
+    animation-delay: 1700ms;
+}
+
+.category_family_class {
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    border: 10px;
+    background-image: url(../img/family_crop.jpg);
+    background-color: rgba(255, 255, 255, 100);
+    background-size: 500px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    margin: 50px;
+    box-shadow: 0 0 20px 10px white;
+    animation: category_btn_anim 5s infinite;
+    animation-delay: 3500ms;
+}
+
+@keyframes category_btn_anim {
+    0% {
+        box-shadow: 0 0 20px 10px white;
+    }
+    25% {
+        box-shadow: 0 0 50px 15px white;
+    }
+    50% {
+        box-shadow: 0 0 20px 10px white;
+    }
+    100% {
+        box-shadow: 0 0 20px 10px white;
+    }
+}
+
+.category_text_banner_class {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    opacity: 0.60;
+    display: table;
+}
+
+h1.category_text_class {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+/* click card */
+.click_card_class {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_to_click_class {
+    width: 216px;
+    height: 384px;
+    background-image: url("../img/TAROT_Cover.jpg");
+    background-size: 100%;
+    border-radius: 20px;
+    border: 2px;
+    border-color: black;
+    box-shadow: 10px 10px 20px 10px #222222;
+    margin: 20px;
+    animation: card_jump 10s infinite;
+    animation-delay: 3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* animation: move_to_card_1 3s 1 forwards; */
+}
+
+@keyframes move_to_card_1 {
+    from{
+        left: 50%;
+    }
+    to{
+        position: absolute;
+        left: 10%;
+    }
+    
+}
+
+@keyframes card_jump {
+    0% {
+        margin-top: 20px;
+    }
+    10% {
+        margin-top: -20px;
+    }
+    20% {
+        margin-top: 20px;
+    }
+    100% {
+        margin-top: 20px;
+    }
+}
+
+h1.card_to_click_text_class {
+    color: black;
+    font-size: 60px;
+    animation: click_text_shine 2s infinite alternate;
+}
+
+@keyframes click_text_shine {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+
+/* select card */
+.card_to_select_class {
+    width: 216px;
+    height: 384px;
+    background-image: url("../img/TAROT_Cover.jpg");
+    background-size: 100%;
+    border-radius: 20px;
+    border: 2px;
+    border-color: black;
+    box-shadow: 10px 10px 20px 10px #222222;
+    margin: 20px;
+    animation: card_jump 10s infinite ease-in-out 3s, card_to_select_downward 100ms forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_to_select_class:hover {
+    width: 216px;
+    height: 384px;
+    background-image: url("../img/TAROT_Cover.jpg");
+    background-size: 100%;
+    border-radius: 20px;
+    border: 2px;
+    border-color: black;
+    box-shadow: 10px 10px 20px 10px #222222;
+    margin: 20px;
+    animation: card_to_select_upward 100ms 1 forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes card_to_select_upward {
+    from {
+        margin-top: 20px;
+    }
+    to {
+        margin-top: -40px;
+    }
+}
+
+@keyframes card_to_select_downward {
+    from {
+        margin-top: -40px;
+    }
+    to {
+        margin-top: 20px;
+    }
+}
+
+/* Back and share button */
+.back_btn_class {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255,255,255);
+    opacity: 0.4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 90%;
+    top: 80%;
+    animation: back_btn_fadeout 500ms 1 forwards;
+}
+
+.back_btn_class:hover {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255,255,255);
+    opacity: 0.4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 90%;
+    top: 80%;
+    animation: back_btn_fadein 500ms 1 forwards;
+}
+
+.share_btn_class {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255,255,255);
+    opacity: 0.4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 90%;
+    top: 80%;
+    margin-left: -200px;
+    animation: back_btn_fadeout 500ms 1 forwards;
+}
+
+.share_btn_class:hover {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255,255,255);
+    opacity: 0.4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 90%;
+    top: 80%;
+    margin-left: -200px;
+    animation: back_btn_fadein 500ms 1 forwards;
+}
+
+h1.card_text_h1_class {
+
+}
+
+@keyframes back_btn_fadein {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+@keyframes back_btn_fadeout {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
+
+/* select card */
+.select_card_class {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    display: flexbox;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_row {
+    width: 100%;
+    height: 384px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/* show result */
+.show_result_class {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    display: flexbox;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_info_class {
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_name_class {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h1.card_name_h1_class {
+    color: white;
+    font-size: 100px;
+}
+
+.card_image_class {
+    width: 432px;
+    height: 758px;
+    background-image: url("../img/RWS_Tarot_00_Fool.jpg");
+    background-size: 100%;
+    border-radius: 20px;
+    border: 2px;
+    border-color: black;
+    box-shadow: 10px 10px 20px 10px #222222;
+    margin: 20px;
+    margin-right: 150px;
+}
+
+.card_text_class {
+    width: 50%;
+    height: 758px;
+}
+
+h1.card_text_h1_class {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    vertical-align: middle;
+    display: table-cell;
+    color: beige;
+}
