@@ -344,7 +344,7 @@ h1.card_to_click_text_class {
     align-items: center;
     position: absolute;
     left: 90%;
-    top: 80%;
+    top: 85%;
     animation: back_btn_fadeout 500ms 1 forwards;
 }
 
@@ -359,7 +359,7 @@ h1.card_to_click_text_class {
     align-items: center;
     position: absolute;
     left: 90%;
-    top: 80%;
+    top: 85%;
     animation: back_btn_fadein 500ms 1 forwards;
 }
 
@@ -374,7 +374,7 @@ h1.card_to_click_text_class {
     align-items: center;
     position: absolute;
     left: 90%;
-    top: 80%;
+    top: 85%;
     margin-left: -200px;
     animation: back_btn_fadeout 500ms 1 forwards;
 }
@@ -390,7 +390,7 @@ h1.card_to_click_text_class {
     align-items: center;
     position: absolute;
     left: 90%;
-    top: 80%;
+    top: 85%;
     margin-left: -200px;
     animation: back_btn_fadein 500ms 1 forwards;
 }
@@ -432,8 +432,7 @@ h1.card_text_h1_class {
     width: 100%;
     background-color: rgba(0,0,0,0);
     display: flex;
-    align-self: center;
-    align-items: center;
+    align-items: top;
     justify-content: center;
 }
 
@@ -458,17 +457,29 @@ h1.card_name_h1_class {
     border-color: black;
     box-shadow: 10px 10px 20px 10px #222222;
     margin: 20px;
-    margin-right: 150px;
+    margin-right: 100px;
+}
+
+.card_text_base_class {
+    margin-top: 30px;
+    width: 50%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    background: rgba(220,220,255,0.8);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .card_text_class {
-    width: 50%;
-    height: 758px;
+    margin: 50px;
 }
 
 h1.card_text_h1_class {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     vertical-align: middle;
     display: table-cell;
-    color: beige;
+    color: rgb(68, 92, 136);
+    font-size: 40px;
 }

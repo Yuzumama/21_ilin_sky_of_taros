@@ -58,8 +58,10 @@
         <div class="card_info_class">
             <div id="card_image" class="card_image_class">
             </div>
-            <div id="card_text" class="card_text_class">
-                <h1 id="card_text_h1" class="card_text_h1_class"> </h1>
+            <div class="card_text_base_class">
+                <div id="card_text" class="card_text_class">
+                    <h1 id="card_text_h1" class="card_text_h1_class"> </h1>
+                </div>
             </div>
         </div>
         
@@ -106,112 +108,706 @@
         if (selected_card == 0) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_00_Fool.jpg')");
             $("#card_name").text("Fool");
-            $("#card_text_h1").text("Fool");
+
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、あなたは非常に危険な状況に置かれています。この時に最も重要なのは、慎重に自己保護を考えることです。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考える場合は、今は休息する時期です。良い仕事が現れる可能性は低いでしょう。まずは自己を整えて最適な状態にし、その後で再び仕事探しを始める準備を整える必要があります。  </h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 何度も重大なミスを犯し、財務的に修復できないダメージを与えてしまいました。今の状況では、負債を最小限に抑えることが最優先の目標です。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内は不安定な状態にあり、慎重に対処しないと家出の可能性もあります。問題を現実的に考える必要があります。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 1) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_01_Magician.jpg')");
             $("#card_name").text("Magician");
-            $("#card_text_h1").text("Magician");
+
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 新しい仕事の状況に直面していますが、全ての条件が十分に整っているため、機会を活かせば望む成果を得ることができます。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えている場合、新たな仕事の機会が出現しています。自分で探すこともできますし、誰かから紹介される可能性もありますが、どちらにしても良い機会を逃すべきではありません。 </h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> すべてがまだスタートラインに立つ段階ですが、まだまだ発展の余地がたくさんあります。この時期は、着実に仕事を進めて、自分が得るべきものを手に入れる必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭が新しい局面に直面する可能性があります。引っ越しや新しい家族メンバーの加入など、どちらも前向きな視点で受け止めるべきです。恐れることはありません。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 2) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_02_High_Priestess.jpg')");
             $("#card_name").text("High Priestess");
-            $("#card_text_h1").text("High Priestess");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 仕事の状況は非常に安定しており、何も変化がないため、この時期はあまり積極的である必要はありません。ただし、仕事を着実に進め、元の方法に従って作業を完了するだけで十分です。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えている場合、現在は新しい仕事の機会が出ていません。この時間を自己充実のために活用する必要があります。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在は安定した状態にあり、お金の問題を心配する必要はありませんが、将来の成長の余地もあまりありません。自分の仕事をきちんとやり遂げることに専念すれば十分です。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、家庭の状況は非常に安定していますが、家族間のコミュニケーションはほとんどありません。そのため、家庭全体の雰囲気は比較的静かです。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 3) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_03_Empress.jpg')");
             $("#card_name").text("Empress");
-            $("#card_text_h1").text("Empress");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、仕事は豊作の段階に入っています。過去の努力が実を結び始め、目標を達成するために努力を続ければ良い結果が得られるでしょう。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えるのであれば、積極的に仕事を探しましょう。新しい仕事が見つかるだけでなく、友人からの紹介も期待できます。重要なのは、あなたの決意と行動力です。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在は財政状況が比較的余裕がある時期ですが、支出も比較的多いです。バランスを取れるなら、自分を少しでもより良く過ごすべきです。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭は非常に和やかな状況であり、一緒に旅行を計画したり、何かを祝うことを考えている可能性があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 4) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_04_Emperor.jpg')");
             $("#card_name").text("Emperor");
-            $("#card_text_h1").text("Emperor");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 仕事では多くの困難に直面していますが、昇進の機会もあります。多くの規制に制約されていますが、自分の目標を達成することができます。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考える場合、現在はいくつかの良い機会が出ていますが、それぞれに一定の難しさがあります。重要なのは自分の興味に合っていることであり、それが長続きする秘訣です。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現実的な観点から見ると、あなたの財務状況はまだ悪くありませんが、将来には大きな成長の余地がありますので、自分の本業でさらに努力する必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、皆が明確な共通目標を持ち、その目標に向かって一致団結しているため、円滑なコミュニケーションが取れ、共通の話題があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 5) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_05_Hierophant.jpg')");
             $("#card_name").text("Hierophant");
-            $("#card_text_h1").text("Hierophant");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 仕事では多くの貴人に支えられており、自分にはまだ不足している点があっても、多くのサポートを受けることができます。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考える場合、年長者が仕事を紹介してくれる可能性があります。このような場合、自分で仕事を見つけるのは難しいかもしれませんので、自分が仕事を必要としていることを周囲に伝えることが重要です。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 他の支援があるため、財務状況はまずまずでありながら、まだ完全に独立したものとは言えず、成長の余地があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内では共通の家訓があり、良好な秩序と和やかな関係を維持できます。しかし、このような環境では家族との交流があまりにも厳格になることがあります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 6) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_06_Lovers.jpg')");
             $("#card_name").text("Lovers");
-            $("#card_text_h1").text("Lovers");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在の仕事はかなりシンプルで、難しいこともなく、大きな問題もありません。ただし、罠や不適切な誘惑に気をつける必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を検討している場合、現在は2つ以上の仕事の選択肢があるかもしれませんが、より単純な性質のものを選ぶことをお勧めします。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在の資産状況はまずまずですが、将来的にはさらなる成長が期待できます。投資を検討する際には、投資ポートフォリオを再調整する必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家族のメンバーはそれぞれの役割を果たし、分業の状況も良好です。どんな試練や挑戦に直面しても、うまく乗り越えられるでしょう。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 7) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_07_Chariot.jpg')");
             $("#card_name").text("Chariot");
-            $("#card_text_h1").text("Chariot");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 仕事でいくつかの困難や挑戦に直面していますが、それらはあなたの能力範囲内のものです。競争相手を打ち負かし、最終的な勝利者は間違いなくあなたです。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えている場合、2つ以上の仕事の機会が出てくる可能性があります。将来の発展性を考慮に入れると良いですし、興味のある仕事を見つけることでさらなる利益が得られるでしょう。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、財務面では収穫の多い時期ですので、自分の利益をさらに追求するために努力する必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、家庭は重大な挑戦に直面しています。お互いに協力できない場合、家庭は前例のない危機に陥る可能性があります。家族を優先し、考慮する必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 8) {
-            $("#card_image").css("background-image", "url('./img/RWS_Tarot_08.jpg')");
-            $("#card_name").text("Chariot");
-            $("#card_text_h1").text("Chariot");
+            $("#card_image").css("background-image", "url('./img/RWS_Tarot_08_Strength.jpg')");
+            $("#card_name").text("Strength");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 仕事の状況は実際には順調であり、表現の機会も多いです。あなたは常に現れる機会を活かす必要があります。そうすることで仕事で更なる飛躍ができます。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考える場合、現在はまずまずの求人機会がありますが、完全に満足するものではないかもしれません。しかし、現在の機会を活かすことをお勧めします。入ってみると、すべてが価値のあるものであることがわかるでしょう。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、あなたの財務状況は非常に良好です。この時期には、節約してお金を貯めることが重要です。絶対に無駄遣いをしないようにしてください。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内の雰囲気はとても穏やかで成功しており、皆が成果を共有し合っています。お互いに協力して役割分担すれば、より大きな成果が期待できます。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 9) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_09_Hermit.jpg')");
             $("#card_name").text("Hermit");
-            $("#card_text_h1").text("Hermit");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、あなたはキャリアの頂点に達していますが、自分の仕事に理解を示してくれる人がいないため、時には孤独を感じるかもしれません。しかし、あなたの仕事の経験を次の世代に伝える方法を考えることで、その孤独感を軽減することができるでしょう。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を検討している場合、自分から積極的に求人を探すのは難しいかもしれません。しかし、他人からのアプローチに耳を傾け、求人情報を公開することで、新しい仕事の機会を手に入れることができるかもしれません。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 財務状況は現在の主な関心事ではありません。現在の状況は安定していますが、将来を考えた計画を立てる必要があります。目先のことにとらわれず、長期的な視野を持ちましょう。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内の状況は順調ですが、各自が忙しくしており、コミュニケーションが少ないかもしれません。定期的な家族の集まりが必要です。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 10) {
-            $("#card_image").css("background-image", "url('./img/RWS_Tarot_10.jpg')");
-            $("#card_name").text("Hermit");
-            $("#card_text_h1").text("Hermit");
+            $("#card_image").css("background-image", "url('./img/RWS_Tarot_10_Wheel_of_Fortune.jpg')");
+            $("#card_name").text("Wheel of Fortune");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、仕事の状況はかなり順調です。自分があまり努力していなくても、仕事のパフォーマンスは良好で、大抵のことはうまく対処できています。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を検討している場合、現時点では良い求人が出ているかもしれません。重要なのは、その機会を掴めるかどうかです。遠くまで探しに行くと、仕事を見つけるのが早いかもしれません</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、あなたの財政状況はかなり良好であり、幸運があるかもしれません。多くのお金を稼ぐことができるかもしれませんので、この時期を長期的な計画を立てるために活用すべきです。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭は現在良い状況にあります。この機会を活かせば、皆に前進の力を与えるだけでなく、状況も改善できます。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 11) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_11_Justice.jpg')");
             $("#card_name").text("Justice");
-            $("#card_text_h1").text("Justice");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在の職場は安定しており、ほとんどの業務には明確な手順があります。自分が対処できる状況かもしれませんので、大きな問題はありません。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考える場合、現在は良い新しい仕事を見つけることができるかもしれませんが、変化は重大な決定ですので、様々な要因を考慮して最終的な判断を下す必要があります。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在の財務状況は比較的安定していますが、大きな収入が期待できる状況ではありません。ですので、現在の仕事に集中することが大切です。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在の家庭の状況は穏やかですが、家族間の関係にはいくつかの厳格な側面があるかもしれません。このような時には、より多くの交流活動が役立つかもしれません。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 12) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_12_Hanged_Man.jpg')");
             $("#card_name").text("Hanged Man");
-            $("#card_text_h1").text("Hanged Man");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、仕事面で大きな試練に直面しています。それはおそらく一人では解決できないものかもしれません。状況がまだ整っていない場合は、決定を先延ばしにするべきです。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えている場合、今の時点では自ら積極的に新しい仕事を見つけるのは難しいかもしれませんが、誰かがあなたに声をかけてくれる可能性があります。異なる視点で状況を評価し、最適な仕事に出会うことができるでしょう。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在財務面で重要な課題に直面しています。窮乏に陥るほどではありませんが、生活に大きな影響を与える可能性がありますので、注意深く対処する必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内の状況は現在非常に穏やかですが、未解決の長年の問題がまだ残っています。別の視点から見れば、それは問題ではないかもしれません。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 13) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_13_Death.jpg')");
             $("#card_name").text("Death");
-            $("#card_text_h1").text("Death");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 仕事で重大な変化に直面し、選択の余地がなく受け入れなければならず、退職の可能性さえもあります。このような状況では最悪の事態を覚悟する必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えている場合、今は新しい仕事を見つける可能性がありますが、新しい仕事に取り組む決意が必要です。なぜなら、新しい仕事は完全に未知の職種や他の場所に現れる可能性が高いからです。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在は財務面で重大な変化の時期にあり、うまく処理しなければ、あなたを窮地に陥れる可能性があります。間違った決定を見つけた場合でも、それを受け入れることが重要です。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内での重大な変化が起こる可能性がありますが、そのような悲劇に直面した場合、まず心を落ち着け、必要なことを一つずつ確実に進めることが重要です。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 14) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_14_Temperance.jpg')");
             $("#card_name").text("Temperance");
-            $("#card_text_h1").text("Temperance");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 効率的な方法で仕事を管理し、調整する必要があります。コストやリソースを節約できれば、仕事上の利益につながります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えている場合、新しい仕事を自分で見つけることもできますが、他人からの紹介も可能性が高いです。ただし、仕事を変える際には控えめにすることが大切です。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在のあなたはお金持ちではありませんが、財務状況は健全です。全体的に見れば収支がバランスしており、長期的な発展の基盤となっています。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家族間の関係が非常に調和しており、暖かい平和な家庭です。何か不快な出来事があっても、すぐにコミュニケーションを通じて解決できます。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 15) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_15_Devil.jpg')");
             $("#card_name").text("Devil");
-            $("#card_text_h1").text("Devil");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在の仕事状況は非常に厳しいです。多くの問題があなたのコントロールを超えており、失業の可能性もあります。次のキャリアの方向性を真剣に考える必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を検討している場合、現在は運が低調であり、新しい仕事を見つけることは困難です。休息することをお勧めします。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在の状況は表面的には良好に見えますが、実際には多くの問題が潜んでいます。これらの問題は短期間で解決できるものではなく、非常に注意深く取り扱う必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内暴力や他の深刻な脅威が発生する可能性があります。家族間の信頼が崩れ、問題を避ける傾向にあるでしょう。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 16) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_16_Tower.jpg')");
             $("#card_name").text("Tower");
-            $("#card_text_h1").text("Tower");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 仕事上で予期せぬ大きな問題が発生し、自分のコントロール範囲を超える状況に置かれました。しかし、その責任を負うことを求められ、無力感を感じています。もし選択肢があるなら、その職場からできるだけ早く離れることを検討すべきです。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えている場合、現在仕事を探すことは問題を解決するのに役立ちません。むしろ新たなトラブルに巻き込まれる可能性があります。その代わりに、しばらく休息することを検討した方が良いでしょう。</h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、あなたは破産状態にあるか、破産の危機に瀕しています。自力でこの困難を乗り越える能力がなく、専門家の助けが必要です。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭が大きな突然の出来事に直面しています。このような時はまず、心を落ち着かせ、悲しみや恐れの感情から立ち直ることが重要です。それが問題解決の第一歩です。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 17) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_17_Star.jpg')");
             $("#card_name").text("Star");
-            $("#card_text_h1").text("Star");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、仕事には明確な目標がありますので、その目標に関連するすべての機会をしっかりと掴むべきです。他のことに気を散らさないようにしてください。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えている場合、明確な目標を持って自信を持って行動すれば、より良い仕事が見つかる可能性があります。 </h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> あなたの経済状況はまずまずで、自己のニーズを満たすだけでなく、他人を支援する余裕もあります。所有するだけでなく、分かち合うことも重要であり、与える喜びは受けるよりも大きいものです。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内の雰囲気はとても穏やかであり、家族同士の関係も良好で、お互いの考えを共有できています。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 18) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_18_Moon.jpg')");
             $("#card_name").text("Moon");
-            $("#card_text_h1").text("Moon");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 仕事で大きな挑戦や不確実性に直面しており、さまざまな罠や詐欺にも警戒が必要です。このような状況下では、自分の幻想に惑わされず、誤った判断をしないように注意する必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を検討している場合、求人市場は陥穽に満ちており、良い仕事を見つけるのが難しいかもしれません。休息をとってから再出発することをお勧めします。 </h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 自分の財務状況を現実的に評価できないため、お金が底をついていることに気づかないでいます。このような誤った認識は、あなたに不利な影響をもたらす可能性があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内で予期せぬ出来事が起こり、その結果家庭の雰囲気に影響が出ていますが、慎重に対処すれば、大きな問題は起こらないでしょう。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 19) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_19_Sun.jpg')");
             $("#card_name").text("Sun");
-            $("#card_text_h1").text("Sun");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> あなたの仕事の成果は目覚ましく、自己満足感をもたらしていますが、自己主張が強すぎて他人に嫌われる可能性があることに気をつける必要があります。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> もし転職を考えているのであれば、すでに良い求人が出ています。それはあなたの興味に合ったもので、待遇も満足のいくものです。新しい仕事を探すためには早めの行動が必要です。 </h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在の財務状況は良好であり、資源も最も効果的に配分されています。現在の資産を適切に管理すれば、将来、かなりの利益が見込まれます。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭内は現在、和やかな雰囲気に包まれており、おそらく幸せな出来事があったのかもしれません。家族の間での感情は良好であり、お互いの気持ちをより多く共有できます。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 20) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_20_Judgement.jpg')");
             $("#card_name").text("Judgement");
-            $("#card_text_h1").text("Judgement");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 現在、重大な意思決定に直面しています。この決定は将来に大きな影響を与える可能性があるため、慎重に検討し、時間的なプレッシャーに左右されないようにしてください。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 転職を考えている場合、適切な仕事を見つけることができる見込みがあります。以前の経験や学びに関連する仕事を探すことが重要です。また、人からの紹介を受けることで、新しい職場を見つける可能性が高まります。 </h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> あなたの財務状況が重要な転機を迎えています。この機会を活かして努力するべきです。うまく利用すれば、逆境から脱出する可能性もあります。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭が重要な決定に直面しており、様々な選択肢を慎重に検討し、行動を起こす前に一致した合意を得ることが不可欠です。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
         if (selected_card == 21) {
             $("#card_image").css("background-image", "url('./img/RWS_Tarot_21_World.jpg')");
             $("#card_name").text("World");
-            $("#card_text_h1").text("World");
+            
+            if(selected_category == 1) { // Work
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 仕事 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> あなたの業績は非常に優れており、ほとんどの仕事を予定通りに完了しています。この仕事はあなたにとって非常に適しており、それによって達成感を得ることができます。</h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> もし転職を考えているなら、すぐに新しい仕事が見つかるでしょう。特に以前の経験に関連する仕事はあなたにぴったりです。 </h1>'
+                );
+            }
+            if(selected_category == 2) { // Finance 
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 金運 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 財務状況はすでに収穫期に入っており、以前の投資が実質的なリターンを始めています。現状を維持し、不必要な変更を減らすべきです。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
+            if(selected_category == 3) { // Family
+                $("#card_text").html(
+                    '<h1 class="card_text_h1_class"> 家族 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> 家庭の状況は非常に幸福で和やかであり、皆が自分の役割を果たすことで、団結の力をより発揮しています。 </h1>' + 
+                    '<br>' +
+                    '<h1 class="card_text_h1_class"> </h1>'
+                );
+            }
         }
     });
 
