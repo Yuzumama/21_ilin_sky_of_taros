@@ -648,7 +648,7 @@ h1.card_text_h1_class {
     left: -300px;
     top: -100px;
     opacity: 0.0;
-    animation: back_btn_fadeout 3s 1 forwards;
+    animation: back_btn_fadeout 500ms 1 forwards;
 }
 
 .share_btn_class:hover {
@@ -663,7 +663,7 @@ h1.card_text_h1_class {
     position: relative;
     left: -300px;
     top: -100px;
-    animation: back_btn_fadein 3s 1 forwards;
+    animation: back_btn_fadein 500ms 1 forwards;
 }
 
 
